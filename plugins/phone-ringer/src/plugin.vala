@@ -26,14 +26,14 @@ public class Plugin : RootInterface, NotificationProvider, Object {
     }
 
     private void loop_dialer() {
-        sound_context.play_full(DIALER_ID, dialer_props, (c, id, code) => {
-            if (code == Canberra.Error.CANCELED) return;
-            Timeout.add_seconds(GAP, () => {
-                if (!dialing) return Source.REMOVE;
-                loop_dialer();
-                return Source.REMOVE;
-            });
-        });
+        //sound_context.play_full(DIALER_ID, dialer_props, (c, id, code) => {
+        //    if (code == Canberra.Error.CANCELED) return;
+        //    Timeout.add_seconds(GAP, () => {
+        //        if (!dialing) return Source.REMOVE;
+        //        loop_dialer();
+        //        return Source.REMOVE;
+        //    });
+        //});
     }
 
     public void registered(Dino.Application app) {
